@@ -1,20 +1,20 @@
 {
   "name": "x-middleware-composite",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
-    "x-log": "latest",
-    "x-common": "latest",
-    "x-select": "latest",
+    "x-log": "1.x.x",
+    "x-common": "1.x.x",
+    "x-select": "1.x.x",
     "function-inspector": "git://github.com/mheyse/node-function-inspector.git#master"
   },
   "devDependencies": {
     "vows": "latest",
-    "markdox": "latest"
+	"x-publish": "1.x.x"
   },
   "main": "composite.js",
   "scripts": {
-    "prepublish": "markdox -o README.md ./composite.js",
+	"prepublish": "./node_modules/x-publish/scripts/prepublish.sh",
     "test": "vows ./test/*.test.js"
   }
 }
